@@ -38,8 +38,9 @@ jobs:
       run: ./gradlew build
     - name: Check versions
       run: |
-        java -version
+        java -version and generated jar
         ./gradlew --version
+        ls -lah build/libs/
     - uses: mr-smithers-excellent/docker-build-push@v7
       name: Build & push Docker image
       with:
